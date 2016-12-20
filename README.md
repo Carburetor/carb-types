@@ -3,6 +3,8 @@
 A set of [dry-types](http://dry-rb.org/gems/dry-types/) to ensuer type safety
 for common objects.
 
+TODO: Add tests
+
 ## Installation
 
 Add this line to your application's Gemfile:

@@ -1,6 +1,6 @@
 # carb-types
 
-A set of [dry-types](http://dry-rb.org/gems/dry-types/) to ensuer type safety
+A set of [dry-types](http://dry-rb.org/gems/dry-types/) to ensure type safety
 for common objects.
 
 TODO: Add tests

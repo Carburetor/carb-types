@@ -1,8 +1,7 @@
 # carb-types
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/carb/types`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A set of [dry-types](http://dry-rb.org/gems/dry-types/) to ensuer type safety
+for common objects.
 
 ## Installation
 
@@ -22,7 +21,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Please refer to [dry-types](http://dry-rb.org/gems/dry-types/) for usage. The
+provided types are:
+
+- `Carb::Types::Proc` ensures the object is a proc
+- `Carb::Types::IndifferentSymbol` ensures the object is a symbol, even if
+  string passed
+- `ArrayOfIndifferentSymbols` ensures the object is a valid array of
+  `IndifferentSymbol`
+- `Carb::Types::StringHash` ensures a hash has only string keys
+- `Carb::Types::UUID` ensures a string is a valid UUID
+- `Carb::Types::PG::StringArray` ensures an array is a valid postgres text array
+- `Carb::Types::PG::JSONB` ensures a hashmap, an array or an object are valid
+  JSON for postgres. `JSONBArray`, `JSONBHash` and `JSONBOp` are also provided,
+  ensuring the object is an Array, hash or basic object for JSON
+- `Carb::Types::PG::Bytea` ensures the object is a valid blob for postgres
+- `Carb::Types::PG::CoercibleJSONBHash` ensures the `JSONBHash` can be converted
+  to/from a ruby `Hash`
+- `Carb::Types::PG::Tsvector` ensures the object is a valid postgres tsvector
 
 ## Development
 

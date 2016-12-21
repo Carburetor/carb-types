@@ -9,5 +9,4 @@ module Carb::Types
     end
     input.to_sym
   end
-  ArrayOfIndifferentSymbols = Core::Coercible::Array.member(IndifferentSymbol)
 end

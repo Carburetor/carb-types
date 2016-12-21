@@ -26,7 +26,7 @@ module Carb::Types::PG
   JSONB      = JSONBArray | JSONBHash | JSONBOp
   Bytea      = Raw::Bytea.constructor(Sequel::SQL::Blob.method(:new))
 
-  CoercibleJSONBHash = JSONBHash.constructor(
+  CoercibleJSONBHash = Raw::JSONBHash.constructor(
     ->(input) { Sequel.pg_jsonb(input.to_h) }
   )
 

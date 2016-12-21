@@ -9,21 +9,19 @@ Sequel.extension(:pg_json_ops, :pg_array_ops, :pg_json, :pg_array)
 
 module Carb::Types::PG
   module Raw
-    def self.type_define(klass)
-      Dry::Types::Definition[klass].new(klass)
-    end
+    types      = ::Carb::Types::Core
 
-    UUID       = ::Carb::Types::Core::String
-    Array      = type_define(Sequel::Postgres::PGArray)
-    JSONArray  = type_define(Sequel::Postgres::JSONArray)
-    JSONHash   = type_define(Sequel::Postgres::JSONHash)
-    JSONOp     = type_define(Sequel::Postgres::JSONOp)
+    UUID       = types::String
+    Array      = types.type_define(Sequel::Postgres::PGArray)
+    JSONArray  = types.type_define(Sequel::Postgres::JSONArray)
+    JSONHash   = types.type_define(Sequel::Postgres::JSONHash)
+    JSONOp     = types.type_define(Sequel::Postgres::JSONOp)
     JSON       = JSONArray | JSONHash | JSONOp
-    JSONBArray = type_define(Sequel::Postgres::JSONBArray)
-    JSONBHash  = type_define(Sequel::Postgres::JSONBHash)
-    JSONBOp    = type_define(Sequel::Postgres::JSONBOp)
+    JSONBArray = types.type_define(Sequel::Postgres::JSONBArray)
+    JSONBHash  = types.type_define(Sequel::Postgres::JSONBHash)
+    JSONBOp    = types.type_define(Sequel::Postgres::JSONBOp)
     JSONB      = JSONBArray | JSONBHash | JSONBOp
-    Bytea      = type_define(Sequel::SQL::Blob)
-    Money      = ::Carb::Types::Core::Decimal
+    Bytea      = types.type_define(Sequel::SQL::Blob)
+    Money      = types::Decimal
   end
 end

@@ -1,5 +1,5 @@
 require "spec_helper"
-require "carb/types"
+require "carb/types/version"
 
 describe Carb::Types do
   it "has a version number" do

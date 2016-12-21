@@ -5,6 +5,7 @@ require "carb/types/core"
 require "carb/types/proc"
 require "carb/types/uuid"
 require "carb/types/indifferent_symbol"
+require "carb/types/array_of_indifferent_symbols"
 require "carb/types/string_hash"
 
 module Carb::Types
